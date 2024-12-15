@@ -1,0 +1,62 @@
+INFO:root:Attempting to open a MySQL database without providing necessary info.
+INFO:root:Ending the program because of no valid database.
+ERROR:root:MySQL error: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+Traceback (most recent call last):
+  File "C:\Users\jmmck\anaconda3\lib\site-packages\mysql\connector\connection_cext.py", line 263, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'ODBC'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\db\invalid_mysql_db.py", line 12, in __init__
+    self.conn = mysql.connector.connect(user='', password='', host='', database='')
+  File "C:\Users\jmmck\anaconda3\lib\site-packages\mysql\connector\pooling.py", line 286, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\jmmck\anaconda3\lib\site-packages\mysql\connector\connection_cext.py", line 101, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\jmmck\anaconda3\lib\site-packages\mysql\connector\abstracts.py", line 1095, in connect
+    self._open_connection()
+  File "C:\Users\jmmck\anaconda3\lib\site-packages\mysql\connector\connection_cext.py", line 268, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\main.py", line 32, in main
+    database = Db()
+  File "c:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\db\invalid_mysql_db.py", line 14, in __init__
+    raise DatabaseConnectionError(f'MySQL error: {error}') from error
+db.exceptions.database_connection_error.DatabaseConnectionError: MySQL error: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+INFO:root:Attempting to open a MySQL database without providing necessary info.
+INFO:root:Ending the program because of no valid database.
+ERROR:root:MySQL error: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+Traceback (most recent call last):
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\venv\lib\site-packages\mysql\connector\connection_cext.py", line 308, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'ODBC'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\db\invalid_mysql_db.py", line 12, in __init__
+    self.conn = mysql.connector.connect(user='', password='', host='', database='')
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\venv\lib\site-packages\mysql\connector\pooling.py", line 293, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\venv\lib\site-packages\mysql\connector\connection_cext.py", line 129, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\venv\lib\site-packages\mysql\connector\abstracts.py", line 1237, in connect
+    self._open_connection()
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\venv\lib\site-packages\mysql\connector\connection_cext.py", line 313, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\main.py", line 31, in main
+    database = Db()
+  File "C:\Users\jmmck\Documents\Projects\Demos\cafe-ratings\db\invalid_mysql_db.py", line 14, in __init__
+    raise DatabaseConnectionError(f'MySQL error: {error}') from error
+db.exceptions.database_connection_error.DatabaseConnectionError: MySQL error: 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: NO)
