@@ -9,9 +9,9 @@ from cafe_feedback_database_api import CafeFeedbackDatabaseAPI
 from cafe_feedback_controller import CafeFeedbackController
 
 # Import the chosen database implementation by uncommenting your preferred option
-# from db.sqlite_db import SQLiteDB as Db
+from db.sqlite_db import SQLiteDB as Db
 # from db.mysql_db import MySQLDB as Db  # Requires MySQL with a cafe ratings database
-from db.invalid_mysql_db import InvalidMySQLDB as Db
+# from db.invalid_mysql_db import InvalidMySQLDB as Db
 # from db.fake_db import FakeDB as Db
 
 from db.exceptions.database_connection_error import DatabaseConnectionError
